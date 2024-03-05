@@ -24,12 +24,6 @@
 ---
 - React, Material UI, Redux, TypeScript, VSCode
 
-### 프로젝트 주요 기능
----
-1. 메인 페이지에서 검색할 재료명을 입력 후 검색합니다.
-2. 검색 결과에 따른 목록을 5개씩 보이며 페이징 처리합니다.
-3. 검색된 내용 레시피 하나를 선택해 상세 내용을 확인합니다.
-
 ### 프로젝트 개발 구성과 이유
 ---
 1. React 를 선택한 이유
@@ -54,18 +48,19 @@
 ---
 - <http://react-today-recipe.s3-website.ap-northeast-2.amazonaws.com/>
 
-### Flow Chart
+
+### 진행 순서
 ---
-처음 페이지 접속하여 진행 flow chart
+1. 메인 페이지에서 검색할 재료명을 입력 후 검색합니다.
+![mainpage](https://github.com/ryu5986/react-today-recipe/assets/66866506/cd2694ef-dc40-4fb0-97e8-37c4b63e70be)
 
 
+2. 검색 결과에 따른 목록을 5개씩 보이며 페이징 처리합니다.
+![list](https://github.com/ryu5986/react-today-recipe/assets/66866506/435ef4e6-c0c4-4daa-b2cd-f8773685b916)
 
 
-목록 페이지에서 상세페이지 진행 flow chart
-
-
-
-
+3. 검색된 내용 레시피 하나를 선택해 상세 내용을 확인합니다.
+![detail](https://github.com/ryu5986/react-today-recipe/assets/66866506/a1763567-0898-48aa-bc22-b96f4cd7dbe8)
 
 
 
