@@ -1,35 +1,83 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# react-today-recipe
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 프로젝트 소개
+---
+재료명을 검색하여 식품안전나라에서 제공하는 API 를 활용해 레시피 목록을 보여주고, 각 레시피 별 상세 내용을 확인 할 수 있는 프로젝트 입니다.
 
-Currently, two official plugins are available:
+### 개발 기간
+---
+* 2024.02.28 ~ 2024.03.03
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 개발 배경
+---
+평소 Vue 를 공부 하면서 React 에 대한 호기심도 생기게 되어 미니 프로젝트를 만들어 보며 Vue 와 어떤점이 다른지 
 
-## Expanding the ESLint configuration
+비교도 하게 되고 전체적인 흐름을 이해하기 위해 진행하였습니다.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+이과정에서 어떤 프로젝트를 만들어 보는게 좋을까 고민하던중 평소 요리하는 것을 좋아하는 저는 늘 '뭘 해먹지?' 라고 고민하는
 
-- Configure the top-level `parserOptions` property like this:
+제모습이 생각나서 레시피 정보를 찾는 프로젝트를 만들게 되었습니다.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-=======
-# react_today_recipe
-react 미니 프로젝트
->>>>>>> 3461fbed805784fed7f1d47b19f11453f6c3e014
+### 기술 스텍
+---
+- React, Material UI, Redux, TypeScript, VSCode
+
+### 프로젝트 주요 기능
+---
+1. 메인 페이지에서 검색할 재료명을 입력 후 검색합니다.
+2. 검색 결과에 따른 목록을 5개씩 보이며 페이징 처리합니다.
+3. 검색된 내용 레시피 하나를 선택해 상세 내용을 확인합니다.
+
+### 프로젝트 개발 구성과 이유
+---
+1. React 를 선택한 이유
+   - Vue 와는 개발 시 어떤 차이점이 있는지 확인해보고 싶었고 현재 가장 점유율이 높은 React 를 사용할 줄 알아야 한다는 필요성을 느껴 선택하였습니다.
+
+2. Vite를 사용한 이유
+   - Webpack 과 달리 esbuild로 미리 번들링한 모듈을 필요할 때 동적으로 가져와 빌드 속도가 빠르며 개발 과정에서 변경되는 부분 확인에 용이하여 사용했습니다.
+
+3. MUI, sx property, SCSS
+   - Vue 에서 Vuetify 를 사용하여 개발했던 경험이 생각나 React 에서도 비슷한 무언가 있지 않을까 찾던 중 MUI 를 찾을 수 있게 되었고 사용이 용이하다 판단하여 사용하였습니다.
+   - 클래스로 굳이 묶지 않아도 되고 style 설정 내용이 길지 않은 것들은 sx property를 사용하여 편리하게 사용하였습니다.
+   - 클래스를 지정한 내용들은 scss 파일을 만들어 공통이름 부분 다음 이름부분은 &로 엮어서 처리해 가독성을 올렸습니다.
+
+4. Redux 사용한 이유
+   - 우선은 해당 프로젝트에서는 굳이 사용하지 않아도 되지만, 공통팝업을 이용할 때 상태관리를 통해 관리한다면 좀 더 효율적이지 않을까 생각하여 사용하였습니다.
+
+5. TypeScript 사용 이유
+   - 기존 javascript 만으로 작업할 때는 타입이 명시적이지 않아 가독성이 떨어지고 타입을 추론해야 하는 면에서 다소 불편함이 있었으나 TypeScript 는 보다 명시적이고 JAVA 에서 활용했던 것처럼 제네릭도 표현할 수 있어 확실히 직관적으로 알 수 있는 장점이 있어 사용하였습니다.
+  
+
+### URL
+---
+- <http://react-today-recipe.s3-website.ap-northeast-2.amazonaws.com/>
+
+### Flow Chart
+---
+처음 페이지 접속하여 진행 flow chart
+
+
+
+
+목록 페이지에서 상세페이지 진행 flow chart
+
+
+
+
+
+
+
+
+### 느낀점
+---
+간단한 프로젝트 였지만 Vue 와 React 를 비교하기에 나쁘지 않았다고 생각합니다.
+
+React 는 우선 의문점이 들때 찾아볼 수 있는 내용이 많아 좋았고, JSX/TSX 파일 안에서 모든걸 처리할 수 있다는게 놀랍기도 했습니다.
+
+하나의 파일 안에서 모든 작업을 처리 할 수 있다는 점에서 개발속도가 확실히 빠르다고도 느꼈고 좀 더 가시적으로 느껴졌습니다.
+
+다만 아쉬웠던 점은 프로젝트 구조를 나눌때는 확실히 Vue 쪽이 좀 더 체계적이라는 느낌을 받았으며, composition api 를 활용했던게 좀 더 명시적이라는 느낌을 받았습니다.
+
+큰 프로젝트는 아니었지만 React 구성과 흐름을 이해할 수 있었습니다.
