@@ -19,11 +19,17 @@ export default function Footer(){
                     onChange={(event, newValue) => {
                         
                         if(newValue == 0){
+
                             navigate('/');
+
                         }else if(newValue == 1){
-                            console.log(newValue)
+
+                            window.open('https://github.com/ryu5986/react_today_recipe', "_blank", "noopener, noreferrer");
+                            
                         }else if(newValue == 2){
+
                             window.open('https://www.foodsafetykorea.go.kr/main.do', "_blank", "noopener, noreferrer");
+                            
                         }
 
                         setValue(newValue);
